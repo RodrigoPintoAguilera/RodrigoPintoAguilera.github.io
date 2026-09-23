@@ -24,6 +24,12 @@ html { scroll-behavior: smooth; }
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  /* Italic glyphs overhang their box; the gradient is only painted inside it.
+     Pad the box so the overhang gets painted, and cancel the pad with margin. */
+  padding: 0.1em 0.12em;
+  margin: -0.1em -0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 /* Halftone overlay */
