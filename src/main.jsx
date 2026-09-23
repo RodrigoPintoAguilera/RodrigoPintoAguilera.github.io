@@ -482,35 +482,39 @@ function Education() {
         </h2>
         <div className="mt-14 space-y-3">
           {items.map((e, i) => (
-            <div key={i} className="ring-gradient flex flex-col md:flex-row md:items-center gap-4 md:gap-8 p-5 md:px-7 md:py-5 bg-surface/40 rounded-3xl md:rounded-full border border-stroke hover:bg-surface/70 transition overflow-hidden">
-              <div className="flex items-center gap-4 md:min-w-[60px]">
-                <span className="w-2 h-2 rounded-full accent-gradient" />
-                <span className="text-muted font-mono text-xs tracking-[0.2em]">0{i+1}</span>
+            <div key={i} className="ring-gradient flex flex-col xl:flex-row xl:items-center gap-3 xl:gap-8 p-5 md:px-7 md:py-5 bg-surface/40 rounded-3xl xl:rounded-full border border-stroke hover:bg-surface/70 transition overflow-hidden">
+              <div className="flex items-baseline xl:items-center gap-4 flex-1 min-w-0">
+                <div className="flex items-center gap-4 shrink-0 xl:min-w-[60px]">
+                  <span className="w-2 h-2 rounded-full accent-gradient" />
+                  <span className="text-muted font-mono text-xs tracking-[0.2em]">0{i+1}</span>
+                </div>
+                <div className="min-w-0 xl:min-w-[12rem] font-display italic text-xl sm:text-2xl md:text-3xl leading-snug break-words">{e.inst}</div>
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="font-display italic text-xl sm:text-2xl md:text-3xl leading-snug break-words">{e.inst}</div>
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 xl:flex-nowrap xl:gap-8 xl:shrink-0">
+                <div className="text-text-primary/85 text-sm md:text-base xl:whitespace-nowrap">{e.role}</div>
+                <div className="hidden xl:block w-px h-6 bg-stroke" />
+                <div className="text-muted text-xs font-mono tracking-[0.2em] uppercase whitespace-nowrap">{e.tag}</div>
+                <div className="text-muted text-sm font-mono tabular-nums whitespace-nowrap">{e.dates}</div>
               </div>
-              <div className="text-text-primary/85 text-sm md:text-base">{e.role}</div>
-              <div className="hidden md:block w-px h-6 bg-stroke" />
-              <div className="text-muted text-xs font-mono tracking-[0.2em] uppercase">{e.tag}</div>
-              <div className="text-muted text-sm font-mono tabular-nums whitespace-nowrap">{e.dates}</div>
             </div>
           ))}
         </div>
         <div className="mt-14 text-muted font-mono text-xs tracking-[0.2em] uppercase">Certifications</div>
         <div className="mt-5 space-y-3">
           {certs.map((c, i) => (
-            <a key={i} href={c.href} target="_blank" rel="noopener" className="ring-gradient flex flex-col md:flex-row md:items-center gap-4 md:gap-8 p-5 md:px-7 md:py-5 bg-surface/40 rounded-3xl md:rounded-full border border-stroke hover:bg-surface/70 transition overflow-hidden">
-              <div className="flex items-center gap-4 md:min-w-[60px]">
-                <span className="w-2 h-2 rounded-full accent-gradient" />
-                <span className="text-muted font-mono text-xs tracking-[0.2em]">0{i+1}</span>
+            <a key={i} href={c.href} target="_blank" rel="noopener" className="ring-gradient flex flex-col xl:flex-row xl:items-center gap-3 xl:gap-8 p-5 md:px-7 md:py-5 bg-surface/40 rounded-3xl xl:rounded-full border border-stroke hover:bg-surface/70 transition overflow-hidden">
+              <div className="flex items-baseline xl:items-center gap-4 flex-1 min-w-0">
+                <div className="flex items-center gap-4 shrink-0 xl:min-w-[60px]">
+                  <span className="w-2 h-2 rounded-full accent-gradient" />
+                  <span className="text-muted font-mono text-xs tracking-[0.2em]">0{i+1}</span>
+                </div>
+                <div className="min-w-0 xl:min-w-[12rem] font-display italic text-xl sm:text-2xl md:text-3xl leading-snug break-words">{c.name}</div>
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="font-display italic text-xl sm:text-2xl md:text-3xl leading-snug break-words">{c.name}</div>
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 xl:flex-nowrap xl:gap-8 xl:shrink-0">
+                <div className="text-muted text-xs font-mono tracking-[0.2em] uppercase xl:whitespace-nowrap">{c.issuer}</div>
+                <div className="hidden xl:block w-px h-6 bg-stroke" />
+                <div className="flex items-center gap-3 text-muted text-sm font-mono tabular-nums whitespace-nowrap">{c.date}<ArrowUR size={14} /></div>
               </div>
-              <div className="text-muted text-xs font-mono tracking-[0.2em] uppercase">{c.issuer}</div>
-              <div className="hidden md:block w-px h-6 bg-stroke" />
-              <div className="flex items-center gap-3 text-muted text-sm font-mono tabular-nums whitespace-nowrap">{c.date}<ArrowUR size={14} /></div>
             </a>
           ))}
         </div>
