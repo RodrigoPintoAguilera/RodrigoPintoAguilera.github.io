@@ -1,0 +1,9 @@
+node_modules/
+dist/
+
+# Originales y material de trabajo (no se publican)
+/Portfolio.html
+/.thumbnail
+/assets/
+/uploads/
+/.claude/
