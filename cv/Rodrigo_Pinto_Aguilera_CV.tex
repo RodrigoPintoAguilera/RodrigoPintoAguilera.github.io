@@ -1,0 +1,185 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[left=0.5in, right=0.5in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+  pdftitle={Rodrigo Pinto Aguilera - CV},
+  pdfauthor={Rodrigo Pinto Aguilera}
+}
+
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\scshape}
+  {}{0em}
+  {}
+  [{\titlerule[0.5pt]}]
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+
+\setlist[itemize]{leftmargin=1.5em, topsep=0pt, itemsep=2pt, parsep=0pt}
+\renewcommand\labelitemi{\tiny$\bullet$}
+
+\begin{document}
+
+% ==============================================
+% HEADER
+% ==============================================
+\begin{center}
+    {\Huge \textbf{Rodrigo Pinto Aguilera}} \\ \vspace{5pt}
+    \small +34 659 53 59 79 \ $\vert$ \
+    \href{mailto:rodrigopintoaguilera05@gmail.com}{rodrigopintoaguilera05@gmail.com} \ $\vert$ \
+    Stockholm, Sweden \\ \vspace{2pt}
+    \href{https://rodrigopintoaguilera.github.io}{rodrigopintoaguilera.github.io} \ $\vert$ \
+    \href{https://github.com/RodrigoPintoAguilera}{GitHub} \ $\vert$ \
+    \href{https://www.linkedin.com/in/rodrigo-pinto-aguilera-432141397/}{LinkedIn}
+\end{center}
+
+\vspace{2pt}
+
+% ==============================================
+% PROFILE
+% ==============================================
+\section{Professional Profile}
+
+\noindent
+\small{Data Science \& Artificial Intelligence student at Universidad Politécnica de Madrid, currently on an Erasmus exchange at KTH Royal Institute of Technology in Stockholm. Hands-on experience building machine learning models, data pipelines and cloud deployments with Python, SQL and AWS, from imbalanced classification and clustering to web scraping and graph search. Currently working with SEB on an industry project on neural SDEs. Seeking an internship in data science or machine learning.}
+\vspace{5pt}
+
+% ==============================================
+% EDUCATION
+% ==============================================
+\section{Education}
+
+\noindent
+\textbf{KTH Royal Institute of Technology} \hfill Stockholm, Sweden \\
+\textit{Erasmus Exchange Student} \hfill 08/2026 -- Present
+
+\vspace{5pt}
+
+\noindent
+\textbf{Universidad Politécnica de Madrid (UPM)} \hfill Madrid, Spain \\
+\textit{BSc in Data Science and Artificial Intelligence} \hfill 09/2023 -- Present
+
+% ==============================================
+% EXPERIENCE
+% ==============================================
+\section{Experience}
+
+\noindent
+\textbf{SEB $\times$ KTH Royal Institute of Technology} \hfill Stockholm, Sweden \\
+\textit{Industry Project -- Neural SDEs for Synthetic Stock Data} \hfill 09/2026 -- Present
+\begin{itemize}
+    \item Working with SEB on a course-based project on neural stochastic differential equations (neural SDEs) for generating synthetic stock price data.
+    \item Currently analysing the stability of long-horizon simulations with Monte Carlo experiments on real market data.
+\end{itemize}
+
+\vspace{5pt}
+
+\noindent
+\textbf{Formula E -- Circuito del Jarama} \hfill Madrid, Spain \\
+\textit{Sales Staff} \hfill 03/2026
+\begin{itemize}
+    \item Sales and customer service for attendees at the Formula E event at Circuito del Jarama.
+    \item Worked under pressure in a fast-paced, high-attendance international event.
+\end{itemize}
+
+\vspace{5pt}
+
+\noindent
+\textbf{Private Tutoring} \hfill Madrid, Spain \\
+\textit{Mathematics Tutor} \hfill 2025 -- 2026
+\begin{itemize}
+    \item Taught mathematics to secondary school (ESO) and Bachillerato students, adapting explanations to each student's level.
+\end{itemize}
+
+% ==============================================
+% PROJECTS
+% ==============================================
+\section{Projects}
+
+\noindent
+\textbf{Telco Customer Churn Prediction} $\vert$ \textit{\small Python, scikit-learn, imbalanced-learn} \hfill \href{https://rodrigopintoaguilera.github.io/churn/}{\small Project page}
+\begin{itemize}
+    \item Classifier on 7,032 telecom customers (26.5\% churn) tuned for F2-score, with SMOTE and undersampling inside cross-validation to avoid leakage. Best model (KNN) catches $\sim$80\% of real churners, with a test F2 of 0.696.
+\end{itemize}
+
+\vspace{3pt}
+
+\noindent
+\textbf{Socioeconomic Clustering} $\vert$ \textit{\small Python, scikit-learn, SciPy, PCA} \hfill \href{https://rodrigopintoaguilera.github.io/clustering/}{\small Project page}
+\begin{itemize}
+    \item Compared K-Means, Hierarchical, DBSCAN and Gaussian Mixture on $\sim$22,700 Census-style records. Chose K-Means ($k=5$, silhouette 0.22) over a higher-scoring hierarchical model that put 67\% of the data in one cluster, obtaining five interpretable profiles despite weak separation.
+\end{itemize}
+
+\vspace{3pt}
+
+\noindent
+\textbf{Game Store on AWS} $\vert$ \textit{\small AWS, Flask, PostgreSQL} \hfill \href{https://rodrigopintoaguilera.github.io/aws-game-store/}{\small Project page}
+\begin{itemize}
+    \item Deployed a Flask REST API on AWS across two Availability Zones: custom VPC with private subnets, load balancer, auto scaling (2--4 instances), RDS PostgreSQL, and CloudWatch alarms with SNS alerts.
+\end{itemize}
+
+\vspace{3pt}
+
+\noindent
+\textbf{Top-5 Leagues Scraper} $\vert$ \textit{\small Python, Selenium, Pandas} \hfill \href{https://rodrigopintoaguilera.github.io/football-scraper/}{\small Project page}
+\begin{itemize}
+    \item Scraped 1,636 players from Europe's top five football leagues with five years of market values; cleaned the data and analysed 7 performance and market-value questions.
+\end{itemize}
+
+\vspace{3pt}
+
+\noindent
+\textbf{Buenos Aires Subway Route Planner} $\vert$ \textit{\small Python, NetworkX, PyQt5, Folium} \hfill \href{https://rodrigopintoaguilera.github.io/subte-router/}{\small Project page}
+\begin{itemize}
+    \item A* search on a directed graph of 5 lines and 34 stations, with time-dependent edge weights from official GTFS frequencies; desktop app with an interactive route map.
+\end{itemize}
+
+% ==============================================
+% SKILLS
+% ==============================================
+\section{Skills \& Certifications}
+
+\noindent
+\textbf{Programming:} Python, SQL, R.
+
+\vspace{3pt}
+
+\noindent
+\textbf{Machine Learning:} scikit-learn, PyTorch, TensorFlow, Keras, XGBoost.
+
+\vspace{3pt}
+
+\noindent
+\textbf{Data:} Pandas, Polars, NumPy, DuckDB, ClickHouse, Apache Kafka, Matplotlib, Seaborn.
+
+\vspace{3pt}
+
+\noindent
+\textbf{Cloud \& Tools:} AWS (EC2, RDS, S3, Lambda, VPC, CloudWatch), Docker, Git, GitHub, Linux.
+
+\vspace{3pt}
+
+\noindent
+\textbf{Certifications:} \href{https://learn.microsoft.com/api/credentials/share/en-us/RODRIGOPINTOAGUILERA-7415/292C69A45AF1BC46?sharingId=844F4893231F1CFE}{GitHub Foundations} -- GitHub (07/2026).
+
+\vspace{3pt}
+
+\noindent
+\textbf{Languages:} Spanish (Native), English (B2).
+
+% ==============================================
+% INTERESTS
+% ==============================================
+\section{Interests}
+
+\noindent
+Sports, mountain hiking, reading and travelling.
+
+\end{document}

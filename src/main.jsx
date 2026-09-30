@@ -4,6 +4,8 @@ import { gsap } from 'gsap';
 import './index.css';
 
 
+const CV_URL = '/cv/Rodrigo_Pinto_Aguilera_CV.pdf';
+
 /* ---------- Hooks ---------- */
 function useReveal() {
   const ref = useRef(null);
@@ -116,7 +118,7 @@ function Navbar() {
     ['About', '#about'],
   ];
   return (
-    <nav className={"fixed top-5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 " + (scrolled ? "shadow-2xl shadow-black/40" : "")}>
+    <nav className={"fixed top-5 left-1/2 -translate-x-1/2 z-50 w-max transition-all duration-300 " + (scrolled ? "shadow-2xl shadow-black/40" : "")}>
       <div className="flex items-center gap-2 bg-surface/70 backdrop-blur-md border border-white/10 rounded-full pl-2 pr-2 py-2">
         <div className="relative w-9 h-9 rounded-full grid place-items-center">
           <div className="absolute inset-0 rounded-full logo-ring animate-spin-slow" />
@@ -125,11 +127,14 @@ function Navbar() {
         </div>
         <div className="flex items-center text-[13px]">
           {links.map(([l, h]) => (
-            <a key={l} href={h} className="px-3 py-1.5 rounded-full text-text-primary/85 hover:text-text-primary transition">
+            <a key={l} href={h} className="px-2 max-[359px]:px-1.5 sm:px-3 py-1.5 rounded-full text-text-primary/85 hover:text-text-primary transition">
               {l}
             </a>
           ))}
-          <a href="#contact" className="ml-1 px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-text-primary transition flex items-center gap-1.5">
+          <a href={CV_URL} target="_blank" rel="noopener" className="px-2 max-[359px]:px-1.5 sm:px-3 py-1.5 rounded-full text-text-primary/85 hover:text-text-primary transition">
+            CV
+          </a>
+          <a href="#contact" className="ml-1 px-2.5 max-[359px]:px-2 sm:px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-text-primary transition flex items-center gap-1.5">
             Say hi <ArrowUR size={12} />
           </a>
         </div>
@@ -555,14 +560,24 @@ function Footer() {
           <p className="mt-6 mx-auto max-w-md text-[15px] text-muted">
             Open to internships.
           </p>
-          <a
-            href="mailto:rodrigopintoaguilera05@gmail.com"
-            className="ring-gradient mt-10 inline-flex items-center gap-3 px-5 sm:px-7 py-4 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md hover:scale-[1.04] transition text-sm sm:text-base max-w-[calc(100vw-3rem)] overflow-hidden"
-          >
-            <Mail size={16} />
-            <span className="truncate max-w-[200px] sm:max-w-none">rodrigopintoaguilera05@gmail.com</span>
-            <ArrowUR size={14} />
-          </a>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="mailto:rodrigopintoaguilera05@gmail.com"
+              className="ring-gradient inline-flex items-center gap-3 px-5 sm:px-7 py-4 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md hover:scale-[1.04] transition text-sm sm:text-base max-w-[calc(100vw-3rem)] overflow-hidden"
+            >
+              <Mail size={16} />
+              <span className="truncate max-w-[200px] sm:max-w-none">rodrigopintoaguilera05@gmail.com</span>
+              <ArrowUR size={14} />
+            </a>
+            <a
+              href={CV_URL}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 px-5 sm:px-7 py-4 rounded-full bg-white text-bg text-sm sm:text-base font-medium hover:scale-[1.04] transition"
+            >
+              View CV <span className="text-bg/60 text-xs font-mono">PDF</span> <ArrowUR size={14} />
+            </a>
+          </div>
         </div>
 
         {/* Footer bar */}
