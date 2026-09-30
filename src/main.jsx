@@ -127,14 +127,11 @@ function Navbar() {
         </div>
         <div className="flex items-center text-[13px]">
           {links.map(([l, h]) => (
-            <a key={l} href={h} className="px-2 max-[359px]:px-1.5 sm:px-3 py-1.5 rounded-full text-text-primary/85 hover:text-text-primary transition">
+            <a key={l} href={h} className="px-3 max-[359px]:px-2 py-1.5 rounded-full text-text-primary/85 hover:text-text-primary transition">
               {l}
             </a>
           ))}
-          <a href={CV_URL} target="_blank" rel="noopener" className="px-2 max-[359px]:px-1.5 sm:px-3 py-1.5 rounded-full text-text-primary/85 hover:text-text-primary transition">
-            CV
-          </a>
-          <a href="#contact" className="ml-1 px-2.5 max-[359px]:px-2 sm:px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-text-primary transition flex items-center gap-1.5">
+          <a href="#contact" className="ml-1 px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-text-primary transition flex items-center gap-1.5">
             Say hi <ArrowUR size={12} />
           </a>
         </div>
@@ -560,7 +557,7 @@ function Footer() {
           <p className="mt-6 mx-auto max-w-md text-[15px] text-muted">
             Open to internships.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="mt-10 flex flex-col items-center gap-3">
             <a
               href="mailto:rodrigopintoaguilera05@gmail.com"
               className="ring-gradient inline-flex items-center gap-3 px-5 sm:px-7 py-4 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md hover:scale-[1.04] transition text-sm sm:text-base max-w-[calc(100vw-3rem)] overflow-hidden"
